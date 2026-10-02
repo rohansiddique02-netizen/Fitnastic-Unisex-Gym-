@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITNASTIC GYM | Premier Fitness in Bardhaman</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+   <header>
+        <div class="nav-container">
+            <a href="#" class="logo">FITNASTIC<span>GYM</span></a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Nav Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Programs</a></li>
+                <li><a href="#amenities">Features</a></li>
+                <li><a href="#calculator">Calorie Calc</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <button class="cta-btn nav-btn" data-target="pricing">Join Now</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="about" class="hero">
+        <div class="hero-content">
+            <h1>ELEVATE YOUR FITNESS.</h1>
+            <p>The best equipment, expert trainers, and an AC facility dedicated to your results right here in Bardhaman.</p>
+            <button class="cta-btn hero-btn" data-target="pricing">Choose Your Plan</button>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <h2 class="section-title">Programs</h2>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-tag">Strength</div>
+                <h3>Strength & Power</h3>
+                <p>Heavy iron, calibrated plates, and power racks built for athletes looking to build maximum force.</p>
+            </div>
+            <div class="card">
+                <div class="card-tag">Endurance</div>
+                <h3>HIIT & Conditioning</h3>
+                <p>High-intensity interval protocols designed to spike your metabolic rate and maximize cardiovascular capacity.</p>
+            </div>
+            <div class="card">
+                <div class="card-tag">1-On-1</div>
+                <h3>Personal Coaching</h3>
+                <p>Objective-driven programming, technique correction, and customized nutrition strategies direct from certified trainers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AMENITIES SECTION (REAL DATA) -->
+    <section id="amenities" class="amenities-section">
+        <h2 class="section-title">Facility Features</h2>
+        <div class="grid-3">
+            <ul style="list-style: none; padding: 0; text-align: center;">
+                <li style="margin-bottom: 10px;">✔ Fully Air Conditioned (AC)</li>
+                <li style="margin-bottom: 10px;">✔ On-site Services & Personal Training</li>
+                <li style="margin-bottom: 10px;">✔ Online Classes Available</li>
+                <li style="margin-bottom: 10px;">✔ Restrooms & Gender-Neutral Toilets</li>
+                <li style="margin-bottom: 10px;">✔ LGBTQ+ Friendly Space</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- BMR CALCULATOR SECTION -->
+    <section id="calculator">
+        <h2 class="section-title">Daily Maintenance Calculator</h2>
+        <div class="calculator-container">
+            <form id="bmr-form">
+                <div class="form-group">
+                    <label for="gender">Gender</label>   
+                    <select id="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age (years)</label>
+                    <input type="number" id="age" placeholder="25" required min="12" max="90">
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="75" required min="30" max="300">
+                </div>
+                <div class="form-group">
+                    <label for="height">Height (cm)</label>
+                    <input type="number" id="height" placeholder="175" required min="100" max="250">
+                </div>
+                <div class="form-group">
+                    <label for="activity">Activity Level</label>
+                    <select id="activity" required>
+                        <option value="1.2">Sedentary (Little or no exercise)</option>
+                        <option value="1.375">Lightly Active (1-3 days/week)</option>
+                        <option value="1.55">Moderately Active (3-5 days/week)</option>
+                        <option value="1.725">Very Active (6-7 days/week)</option>
+                    </select>
+                </div>
+                <button type="submit" class="cta-btn full-width">Calculate Maintenance Calories</button>
+            </form>
+            <div id="calc-result"></div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+        <h2 class="section-title">Membership Plans</h2>
+        <div class="grid-3">
+            <div class="card price-card">
+                <div>
+                    <h3>Basic</h3>
+                    <div class="price">₹999<span>/mo</span></div>
+                    <ul>
+                        <li>Full Gym Access</li>
+                        <li>Locker Room & Shower</li>
+                        <li>Free Wifi</li>
+                    </ul>
+                </div>
+                <button class="cta-btn select-plan-btn" data-plan="Basic">Select Plan</button>
+            </div>
+
+            <div class="card price-card highlight-card">
+                <div>
+                    <h3>Pro Gym</h3>
+                    <div class="price">₹1499<span>/mo</span></div>
+                    <ul>
+                        <li>Full Gym Access</li>
+                        <li>All Group Classes Included</li>
+                        <li>1 Free PT Session / month</li>
+                    </ul>
+                </div>
+                <button class="cta-btn select-plan-btn" data-plan="Pro">Select Plan</button>
+            </div>
+
+            <div class="card price-card">
+                <div>
+                    <h3>Elite Performance</h3>
+                    <div class="price">₹2499<span>/mo</span></div>
+                    <ul>
+                        <li>VIP Access</li>
+                        <li>Unlimited Group Classes</li>
+                        <li>Weekly 1-on-1 Coaching Session</li>
+                        <li>Custom Nutrition Plan</li>
+                    </ul>
+                </div>
+                <button class="cta-btn select-plan-btn" data-plan="Elite">Select Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- REAL REVIEWS SECTION -->
+    <section id="reviews" class="reviews-section" style="padding: 4rem 10%; text-align: center;">
+        <h2 class="section-title">What Bardhaman Thinks</h2>
+        <p style="margin-bottom: 2rem;">Rated 4.3/5 based on 179 real Google Reviews</p>
+        <div class="grid-3" style="display: flex; justify-content: center; gap: 20px;">
+            <div class="card" style="text-align: left; border-left: 4px solid #e63946;">
+                <p style="color: #ffd700; margin-bottom: 10px;">★★★★★</p>
+                <p>"Best gym and best trainer best equipment in bardhaman"</p>
+                <h4 style="margin-top: 15px;">- Sk Ambia</h4>
+            </div>
+            <!-- Add 2 more real reviews here -->
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand & Bio -->
+                <div class="footer-col">
+                    <a href="#" class="logo">FITNASTIC<span>GYM</span></a>
+                    <p class="footer-about">
+                        Premium unisex AC gym dedicated to uncompromising performance, scientific training, and actual results.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://wa.me/918918007538" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 16.67c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.32a8.188 8.188 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.184 8.184 0 0 1 2.41 5.83c.02 4.54-3.67 8.24-8.22 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.08-.39-.12-.56.12-.17.25-.66.8-.81.97-.15.17-.3.19-.55.07-.25-.12-1.05-.39-2.01-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.1-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1.01 2.55.12.17 1.73 2.64 4.19 3.7.58.25 1.04.4 1.4.51.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Contact Info -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-info">
+                        <li>
+                            <strong>Call / WhatsApp:</strong> <a href="https://wa.me/918918007538">+91 89180 07538</a>
+                        </li>
+                        <li>
+                            <strong>Address:</strong> Ground floor, Najrul apartment, Nazrul Pally, Bardhaman, West Bengal 713104
+                        </li>
+                        <li>
+                            <strong>Hours:</strong> Open daily, closes 11 PM
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Col 3: Location Map -->
+                <div class="footer-col">
+                    <h4>Location</h4>
+                    <div class="map-container">
+                        <!-- Updated map pointing to Bardhaman -->
+                        <iframe 
+                            title="Fitnastic Gym Location Map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.439502758153!2d87.8576856!3d23.2383569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f849e16567bfdd%3A0x26f632b3545ce03c!2sBardhaman%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="120" 
+                            style="border:0; filter: grayscale(100%) invert(92%) contrast(83%); border-radius: 4px;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Legal Bar -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="copyright-year">2026</span> Fitnastic Unisex Gym. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
