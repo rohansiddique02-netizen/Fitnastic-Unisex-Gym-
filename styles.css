@@ -591,38 +591,65 @@ footer {
    AMENITIES SECTION (ADDED)
    ========================================================================== */
 .amenities-section {
-    background-color: #121319; /* Slightly different shade to separate from programs */
+    background-color: #121319;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
 
-.amenities-section ul {
-    background-color: var(--bg-card);
-    padding: 2.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    max-width: 1000px;
     margin: 0 auto;
-    max-width: 600px; /* Keep the list centered and contained */
 }
 
-.amenities-section li {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    padding: 0.8rem 0;
-    text-align: left;
+.feature-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    width: calc(33.333% - 1rem); /* Fits 3 cards in a row on desktop */
+    min-width: 260px; /* Forces wrap on smaller screens */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.amenities-section li:last-child {
-    border-bottom: none;
-}
-
-.amenities-section li:hover {
+.feature-card svg {
     color: var(--primary);
-    transform: translateX(5px);
-    transition: all 0.3s ease;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
 }
 
+.feature-card span {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Hover Effects */
+.feature-card:hover {
+    border-color: var(--primary);
+    background: #1c1d26;
+    transform: translateY(-5px);
+}
+
+.feature-card:hover svg {
+    transform: scale(1.15);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .feature-card {
+        width: 100%; /* Stacks them in a single column on phones */
+    }
+}
 /* ==========================================================================
    REVIEWS SECTION (ADDED)
    ========================================================================== */
